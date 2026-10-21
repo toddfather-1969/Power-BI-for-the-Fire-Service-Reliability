@@ -1,0 +1,10 @@
+In_08_to_08_Window = 
+VAR StartTime = (TODAY() - 1) + TIME(7,4,5)
+VAR EndTime   = TODAY() + TIME(7,4,5)
+RETURN
+IF(
+    'DwNerisFire Dim_Incident'[CreatedOn] >= StartTime &&
+    'DwNerisFire Dim_Incident'[CreatedOn] < EndTime,
+    1,
+    0
+)
